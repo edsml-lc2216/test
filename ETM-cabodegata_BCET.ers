@@ -1,0 +1,320 @@
+DatasetHeader Begin
+	Version		= "11.0"
+	Name		= "ETM-cabodegata_BCET.ers"
+	LastUpdated	= Thu Dec 09 18:42:25 GMT 2021
+	RasterInfo Begin
+		RegionInfo Begin
+			Type		= Polygon
+			RegionName	= "All"
+			SubRegion	= {
+				0	0
+				0	1640
+				1494	1640
+				1494	0
+			}
+		RegionInfo End
+	RasterInfo End
+	Algorithm Begin
+		Version		= "11.0"
+		Name		= "ETM-cabodegata_BCET"
+		Description	= "No Description"
+		Author		= "ER Mapper"
+		ViewMode	= Planimetric2D
+		LastUpdated	= Thu Dec 09 18:42:25 GMT 2021
+		BackGroundColourSet	= No
+		BackGroundColour	= 0,0,0
+		ConvertToGreyscale	= No
+		CoordinateSpace Begin
+			Datum		= "WGS84"
+			Projection	= "NUTM30"
+			CoordinateType	= EN
+			Units		= "meters"
+			Rotation	= 0:0:0.0
+		CoordinateSpace End
+		TopLeftCorner Begin
+			Eastings	= 559170
+			Northings	= 4112610
+		TopLeftCorner End
+		BottomRightCorner Begin
+			Eastings	= 603990
+			Northings	= 4063410
+		BottomRightCorner End
+		MosaicType	= Overlay
+		PageSize Begin
+			PageConstraint	= None
+			PageWidth	= 8.5
+			PageHeight	= 11
+			TopBorder	= 0
+			BottomBorder	= 1.66934404283802
+			LeftBorder	= 0
+			RightBorder	= 0
+			Scale		= 207596.10930986571
+			PageExtents Begin
+				TopLeftCorner Begin
+					Eastings	= 559170
+					Northings	= 4112610
+				TopLeftCorner End
+				BottomRightCorner Begin
+					Eastings	= 603990
+					Northings	= 4054607.6470588236
+				BottomRightCorner End
+			PageExtents End
+			ContentExtents Begin
+				TopLeftCorner Begin
+					Eastings	= 559170
+					Northings	= 4112610
+				TopLeftCorner End
+				BottomRightCorner Begin
+					Eastings	= 603990
+					Northings	= 4063410
+				BottomRightCorner End
+			ContentExtents End
+		PageSize End
+		Surface Begin
+			Name		= "Default Surface"
+			Transparency	= 0
+			ColorMode	= DATASET
+			LookupTable	= "greyscale"
+			Stream Begin
+				Type		= Pseudo
+				Description	= "Pseudo Layer"
+				Dataset		= "L7-ETM_1999_MS_cabodegata.ers"
+				DoStaticShade	= No
+				SunAzimuth	= 45:0:0.0
+				SunAngle	= 45:0:0.0
+				StreamInput Begin
+					StreamInputID	= 1
+				StreamInput End
+				Formula Begin
+					Name		= "..\..\..\..\Intergraph\ERDAS IMAGINE 2013\etc\erm\formula\rescale\BalancedContrastEnhancementTechnique(BCET).frm"
+					Description	= "Autoscale to 0-255"
+					Comments	= "Author: Dr. Liu Jian Guo
+
+Reference: Liu Jian Guo, 1991, Balance contrast enhancement technique and its application in image colour composition.  International Journal of Remote Sensing, 12, 2133-2151.
+
+Good alternative to simple contrast stretching which usually produces better images.
+
+NOTE: Requires the \"Dynamic Compilation\" preference to be turned on and for a C compiler to be installed and configured)."
+					Formula		= "bcet(i1,MEAN(,R1,i1),STDEV(,R1,i1),110,2,2.5)"
+					FormulaArg Begin
+						StreamInput	= 1
+						BandNumber	= 7
+						BandId Begin
+							Value		= "b6-TIR"
+						BandId End
+					FormulaArg End
+					RegionArg Begin
+						RegionNumber	= 1
+						RegionName	= "All"
+					RegionArg End
+				Formula End
+			Stream End
+			Stream Begin
+				Type		= Pseudo
+				Description	= "Pseudo Layer"
+				Dataset		= "L7-ETM_1999_MS_cabodegata.ers"
+				DoStaticShade	= No
+				SunAzimuth	= 45:0:0.0
+				SunAngle	= 45:0:0.0
+				StreamInput Begin
+					StreamInputID	= 1
+				StreamInput End
+				Formula Begin
+					Name		= "..\..\..\..\Intergraph\ERDAS IMAGINE 2013\etc\erm\formula\rescale\BalancedContrastEnhancementTechnique(BCET).frm"
+					Description	= "Autoscale to 0-255"
+					Comments	= "Author: Dr. Liu Jian Guo
+
+Reference: Liu Jian Guo, 1991, Balance contrast enhancement technique and its application in image colour composition.  International Journal of Remote Sensing, 12, 2133-2151.
+
+Good alternative to simple contrast stretching which usually produces better images.
+
+NOTE: Requires the \"Dynamic Compilation\" preference to be turned on and for a C compiler to be installed and configured)."
+					Formula		= "bcet(i1,MEAN(,R1,i1),STDEV(,R1,i1),110,2,2.5)"
+					FormulaArg Begin
+						StreamInput	= 1
+						BandNumber	= 6
+						BandId Begin
+							Value		= "b7"
+						BandId End
+					FormulaArg End
+					RegionArg Begin
+						RegionNumber	= 1
+						RegionName	= "All"
+					RegionArg End
+				Formula End
+			Stream End
+			Stream Begin
+				Type		= Pseudo
+				Description	= "Pseudo Layer"
+				Dataset		= "L7-ETM_1999_MS_cabodegata.ers"
+				DoStaticShade	= No
+				SunAzimuth	= 45:0:0.0
+				SunAngle	= 45:0:0.0
+				StreamInput Begin
+					StreamInputID	= 1
+				StreamInput End
+				Formula Begin
+					Name		= "..\..\..\..\Intergraph\ERDAS IMAGINE 2013\etc\erm\formula\rescale\BalancedContrastEnhancementTechnique(BCET).frm"
+					Description	= "Autoscale to 0-255"
+					Comments	= "Author: Dr. Liu Jian Guo
+
+Reference: Liu Jian Guo, 1991, Balance contrast enhancement technique and its application in image colour composition.  International Journal of Remote Sensing, 12, 2133-2151.
+
+Good alternative to simple contrast stretching which usually produces better images.
+
+NOTE: Requires the \"Dynamic Compilation\" preference to be turned on and for a C compiler to be installed and configured)."
+					Formula		= "bcet(i1,MEAN(,R1,i1),STDEV(,R1,i1),110,2,2.5)"
+					FormulaArg Begin
+						StreamInput	= 1
+						BandNumber	= 5
+						BandId Begin
+							Value		= "b5"
+						BandId End
+					FormulaArg End
+					RegionArg Begin
+						RegionNumber	= 1
+						RegionName	= "All"
+					RegionArg End
+				Formula End
+			Stream End
+			Stream Begin
+				Type		= Pseudo
+				Description	= "Pseudo Layer"
+				Dataset		= "L7-ETM_1999_MS_cabodegata.ers"
+				DoStaticShade	= No
+				SunAzimuth	= 45:0:0.0
+				SunAngle	= 45:0:0.0
+				StreamInput Begin
+					StreamInputID	= 1
+				StreamInput End
+				Formula Begin
+					Name		= "..\..\..\..\Intergraph\ERDAS IMAGINE 2013\etc\erm\formula\rescale\BalancedContrastEnhancementTechnique(BCET).frm"
+					Description	= "Autoscale to 0-255"
+					Comments	= "Author: Dr. Liu Jian Guo
+
+Reference: Liu Jian Guo, 1991, Balance contrast enhancement technique and its application in image colour composition.  International Journal of Remote Sensing, 12, 2133-2151.
+
+Good alternative to simple contrast stretching which usually produces better images.
+
+NOTE: Requires the \"Dynamic Compilation\" preference to be turned on and for a C compiler to be installed and configured)."
+					Formula		= "bcet(i1,MEAN(,R1,i1),STDEV(,R1,i1),110,2,2.5)"
+					FormulaArg Begin
+						StreamInput	= 1
+						BandNumber	= 4
+						BandId Begin
+							Value		= "b4"
+						BandId End
+					FormulaArg End
+					RegionArg Begin
+						RegionNumber	= 1
+						RegionName	= "All"
+					RegionArg End
+				Formula End
+			Stream End
+			Stream Begin
+				Type		= Pseudo
+				Description	= "Pseudo Layer"
+				Dataset		= "L7-ETM_1999_MS_cabodegata.ers"
+				DoStaticShade	= No
+				SunAzimuth	= 45:0:0.0
+				SunAngle	= 45:0:0.0
+				StreamInput Begin
+					StreamInputID	= 1
+				StreamInput End
+				Formula Begin
+					Name		= "..\..\..\..\Intergraph\ERDAS IMAGINE 2013\etc\erm\formula\rescale\BalancedContrastEnhancementTechnique(BCET).frm"
+					Description	= "Autoscale to 0-255"
+					Comments	= "Author: Dr. Liu Jian Guo
+
+Reference: Liu Jian Guo, 1991, Balance contrast enhancement technique and its application in image colour composition.  International Journal of Remote Sensing, 12, 2133-2151.
+
+Good alternative to simple contrast stretching which usually produces better images.
+
+NOTE: Requires the \"Dynamic Compilation\" preference to be turned on and for a C compiler to be installed and configured)."
+					Formula		= "bcet(i1,MEAN(,R1,i1),STDEV(,R1,i1),110,2,2.5)"
+					FormulaArg Begin
+						StreamInput	= 1
+						BandNumber	= 3
+						BandId Begin
+							Value		= "b3"
+						BandId End
+					FormulaArg End
+					RegionArg Begin
+						RegionNumber	= 1
+						RegionName	= "All"
+					RegionArg End
+				Formula End
+			Stream End
+			Stream Begin
+				Type		= Pseudo
+				Description	= "Pseudo Layer"
+				Dataset		= "L7-ETM_1999_MS_cabodegata.ers"
+				DoStaticShade	= No
+				SunAzimuth	= 45:0:0.0
+				SunAngle	= 45:0:0.0
+				StreamInput Begin
+					StreamInputID	= 1
+				StreamInput End
+				Formula Begin
+					Name		= "..\..\..\..\Intergraph\ERDAS IMAGINE 2013\etc\erm\formula\rescale\BalancedContrastEnhancementTechnique(BCET).frm"
+					Description	= "Autoscale to 0-255"
+					Comments	= "Author: Dr. Liu Jian Guo
+
+Reference: Liu Jian Guo, 1991, Balance contrast enhancement technique and its application in image colour composition.  International Journal of Remote Sensing, 12, 2133-2151.
+
+Good alternative to simple contrast stretching which usually produces better images.
+
+NOTE: Requires the \"Dynamic Compilation\" preference to be turned on and for a C compiler to be installed and configured)."
+					Formula		= "bcet(i1,MEAN(,R1,i1),STDEV(,R1,i1),110,2,2.5)"
+					FormulaArg Begin
+						StreamInput	= 1
+						BandNumber	= 2
+						BandId Begin
+							Value		= "b2"
+						BandId End
+					FormulaArg End
+					RegionArg Begin
+						RegionNumber	= 1
+						RegionName	= "All"
+					RegionArg End
+				Formula End
+			Stream End
+			Stream Begin
+				Type		= Pseudo
+				Description	= "Pseudo Layer"
+				Dataset		= "L7-ETM_1999_MS_cabodegata.ers"
+				DoStaticShade	= No
+				SunAzimuth	= 45:0:0.0
+				SunAngle	= 45:0:0.0
+				StreamInput Begin
+					StreamInputID	= 1
+				StreamInput End
+				Formula Begin
+					Name		= "..\..\..\..\Intergraph\ERDAS IMAGINE 2013\etc\erm\formula\rescale\BalancedContrastEnhancementTechnique(BCET).frm"
+					Description	= "Autoscale to 0-255"
+					Comments	= "Author: Dr. Liu Jian Guo
+
+Reference: Liu Jian Guo, 1991, Balance contrast enhancement technique and its application in image colour composition.  International Journal of Remote Sensing, 12, 2133-2151.
+
+Good alternative to simple contrast stretching which usually produces better images.
+
+NOTE: Requires the \"Dynamic Compilation\" preference to be turned on and for a C compiler to be installed and configured)."
+					Formula		= "bcet(i1,MEAN(,R1,i1),STDEV(,R1,i1),110,2,2.5)"
+					FormulaArg Begin
+						StreamInput	= 1
+						BandNumber	= 1
+						BandId Begin
+							Value		= "b1"
+						BandId End
+					FormulaArg End
+					RegionArg Begin
+						RegionNumber	= 1
+						RegionName	= "All"
+					RegionArg End
+				Formula End
+			Stream End
+		Surface End
+		DotsPerInchAcross	= 96
+		DotsPerInchDown	= 96
+	Algorithm End
+DatasetHeader End
